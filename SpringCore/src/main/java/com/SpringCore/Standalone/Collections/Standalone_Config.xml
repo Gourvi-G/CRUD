@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util
+ http://www.springframework.org/schema/util/spring-util.xsd">
+ 
+ <util:list list-class="java.util.LinkedList" id="mybestfriends">
+	 <value>Gourvi</value>
+	 <value>Kanika</value>
+	 <value>Sakshi</value>
+	 
+ </util:list>
+ 
+ <util:map map-class="java.util.HashMap" id="fees">
+	 <entry key="Spring" value="8000"/>
+	 	 <entry key="python" value="5000"/>
+	 	 	 <entry key="hibernet" value="2000"/>
+ </util:map>
+ 
+ <bean class="com.SpringCore.Standalone.Collections.person" name="person1">
+	 <property name="friends" ref="mybestfriends"/>
+	 <property name="fee_Structure" ref="fees"/>
+	<!--<property name="friends">
+		 <ref  bean="mybestfriends"/>
+	 </property> --> 
+ </bean>
+</beans>
